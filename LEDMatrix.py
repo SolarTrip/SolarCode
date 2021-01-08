@@ -40,16 +40,5 @@ def setup():
     GPIO.setup(dataPin, GPIO.OUT)
     GPIO.setup(latchPin, GPIO.OUT)
     GPIO.setup(clockPin, GPIO.OUT)
-    
-
-
-def destroy():  
-    GPIO.cleanup()
-if __name__ == '__main__':  # Program entrance
-    print ('Program is starting...' )
-    setup() 
-    try:
-        loop()  
-    except KeyboardInterrupt:   # Press ctrl-c to end the program.
-        destroy()  
+      
 
