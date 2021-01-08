@@ -36,7 +36,7 @@ def loop():
     x=0x01
     for i in range(0,8):
       GPIO.output(latchPin,GPIO.LOW)
-      shiftOut(dataPin,clockPin,LSBFIRST,x)
+      shiftOut(dataPin,clockPin,LSBFIRST,data[i])
       GPIO.output(latchPin,GPIO.HIGH)
       x<<=1
       time.sleep(0.1)
