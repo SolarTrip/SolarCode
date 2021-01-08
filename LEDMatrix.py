@@ -46,7 +46,7 @@ def loop():
             x=0x80
             for i in range(0,8):
                 GPIO.output(latchPin,GPIO.LOW)
-                shiftOut(dataPin,clockPin,MSBFIRST,) #first shift data of line information to first stage 74HC959
+                shiftOut(dataPin,clockPin,MSBFIRST,x) #first shift data of line information to first stage 74HC959
 
                 shiftOut(dataPin,clockPin,MSBFIRST,~x) #then shift data of column information to second stage 74HC959
                 GPIO.output(latchPin,GPIO.HIGH) # Output data of two stage 74HC595 at the same time
