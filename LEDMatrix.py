@@ -43,7 +43,7 @@ def shiftOut(dPin,cPin,order,val):
 def loop():
     while True:
         for j in range(0,500): # Repeat enough times to display the smiling face a period of time
-            x=0x80
+            x=0x20
             for i in range(0,8):
                 GPIO.output(latchPin,GPIO.LOW)
                 shiftOut(dataPin,clockPin,LSBFIRST,x) #first shift data of line information to first stage 74HC959
